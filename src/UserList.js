@@ -4,7 +4,7 @@ import "./App.css";
 
 function UserList(){
   const [listOfUsers, setListOfUsers] = useState([]);
-
+  //Getting the data 
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
@@ -24,6 +24,9 @@ function UserList(){
           </tr>
         </thead>
         <tbody>
+
+         {/* mapping on data */}
+         
           {listOfUsers.map((user) => {
             return (
               <tr key={user.id}>
